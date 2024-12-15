@@ -136,9 +136,11 @@ function initFormValidation() {
 
   const validateInput = () => {
     inputBox.classList.remove("success", "error");
-    if (emailRegex.test(input.value.trim())) {
+
+    const value = input.value.trim();
+    if (emailRegex.test(value)) {
       inputBox.classList.add("success");
-    } else if (input.value.trim() !== "") {
+    } else {
       inputBox.classList.add("error");
     }
   };
@@ -146,6 +148,10 @@ function initFormValidation() {
   form.addEventListener("submit", (event) => {
     event.preventDefault();
     validateInput();
+
+    if (inputBox.classList.contains("success")) {
+      console.log("Form is ready to submit!");
+    }
   });
 
   input.addEventListener("input", validateInput);
