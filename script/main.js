@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initFormValidation();
 });
 
-// 1. Burger Menu
 function initBurgerMenu() {
   const burger = document.querySelector(".header__burger");
   const menu = document.querySelector(".mobile-menu");
@@ -61,7 +60,6 @@ function initBurgerMenu() {
   });
 }
 
-// 2. Swiper Slider
 function initSwiperSlider() {
   new Swiper(".news__swiper", {
     slidesPerView: "auto",
@@ -81,7 +79,6 @@ function initSwiperSlider() {
   });
 }
 
-// 3. News Articles Expand
 function initNewsArticles() {
   const articles = document.querySelectorAll(".news__article-content");
 
@@ -101,7 +98,6 @@ function initNewsArticles() {
   document.addEventListener("swiperSlideChange", resetAllArticles);
 }
 
-// 4. Parallax Effect
 function initParallaxEffect() {
   const parallaxImages = document.querySelectorAll(".hero__image");
 
@@ -128,7 +124,6 @@ function initParallaxEffect() {
   });
 }
 
-// 5. Form Validation
 function initFormValidation() {
   const form = document.querySelector(".hero__form");
   const inputBox = document.querySelector(".hero__form-box");
