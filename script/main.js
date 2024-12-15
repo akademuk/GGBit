@@ -20,12 +20,11 @@ function initBurgerMenu() {
     burger.classList.add("active");
     menu.classList.add("active");
     overlay.classList.add("active");
-    body.style.cssText = `
-      position: fixed;
-      top: -${scrollY}px;
-      width: 100%;
-      overflow: hidden;
-    `;
+
+    body.style.position = "fixed";
+    body.style.top = `-${scrollY}px`;
+    body.style.width = "100%";
+    body.style.overflow = "hidden";
   };
 
   const closeMenu = (targetId = null) => {
@@ -33,17 +32,22 @@ function initBurgerMenu() {
     menu.classList.remove("active");
     overlay.classList.remove("active");
 
-    setTimeout(() => {
-      body.style.cssText = "";
+    requestAnimationFrame(() => {
+      body.style.position = "";
+      body.style.top = "";
+      body.style.width = "";
+      body.style.overflow = "";
       window.scrollTo(0, parseInt(body.dataset.scrollY || "0"));
 
       if (targetId) {
-        document.getElementById(targetId)?.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
+        setTimeout(() => {
+          document.getElementById(targetId)?.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }, animationDuration);
       }
-    }, animationDuration);
+    });
   };
 
   burger.addEventListener("click", () => {
