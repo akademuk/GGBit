@@ -12,7 +12,7 @@ function initBurgerMenu() {
   const overlay = document.querySelector(".overlay");
   const body = document.body;
 
-  const animationDuration = 300;
+  const animationDuration = 400;
 
   const openMenu = () => {
     const scrollY = window.scrollY;
