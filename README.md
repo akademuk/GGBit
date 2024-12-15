@@ -21,3 +21,12 @@ Used BEM (Block Element Modifier) methodology to ensure clean, structured, and r
 
 8. Swiper Slider Integration.
 Integrated Swiper Slider to create a carousel. Ensured full responsiveness and smooth transitions.
+
+
+News Cards
+The news cards are implemented in a way that ensures smooth scalability. If additional cards are added, a slider with navigation is automatically enabled. All text, images, and titles are constrained to predefined limits, ensuring that the layout remains intact regardless of content length.
+
+An "expand text" feature has also been implemented, allowing users to reveal the full text of a card. If one card is already expanded and another is opened, the first card will collapse automatically. This behavior is synchronized with the slider as well: when a swipe action is performed, any expanded card will automatically collapse.
+
+Reset and Fonts
+The reset and font styles are combined into a single file to minimize the number of HTTP requests, which helps improve page loading performance.
