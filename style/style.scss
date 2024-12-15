@@ -528,6 +528,8 @@ $font-klapt: "Klapt", sans-serif;
 
 $breakpoint-xl: 1280px;
 
+
+// Mixin
 @mixin respond-to($breakpoint) {
   @media (min-width: #{$breakpoint}) {
     @content;
@@ -805,7 +807,6 @@ body {
     visibility: visible;
   }
 }
-
 .mobile-menu {
   position: fixed;
   top: 80px;
