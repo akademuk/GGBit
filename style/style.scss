@@ -146,8 +146,6 @@ input[type="search"]::-webkit-search-results-decoration {
 input[type="search"] {
   -webkit-appearance: none;
   -moz-appearance: none;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
 }
 
@@ -379,8 +377,6 @@ input[type="radio"] {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box;
 }
@@ -556,6 +552,8 @@ $breakpoint-xl: 1280px;
 @mixin orange-button {
   @include flex-center;
   background: $primary-color;
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   color: $white-color;
   font-size: 16px;
@@ -621,7 +619,8 @@ body {
     height: 88px;
     padding: 24px 0;
     background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(7.5px);
+    -webkit-backdrop-filter: blur(7.5px);
+            backdrop-filter: blur(7.5px);
   }
 
   .wrapper {
@@ -643,7 +642,8 @@ body {
         img {
           width: 100%;
           height: 100%;
-          object-fit: contain;
+          -o-object-fit: contain;
+             object-fit: contain;
         }
       }
     }
@@ -752,7 +752,8 @@ body {
     height: 500px;
     border-radius: 500px;
     background: radial-gradient(#ff4800 0%, rgba(255, 72, 0, 0) 100%);
-    filter: blur(54.000003814697266px);
+    -webkit-filter: blur(54.000003814697266px);
+            filter: blur(54.000003814697266px);
     position: absolute;
     top: -55px;
     right: -200px;
@@ -761,7 +762,8 @@ body {
       width: 1000px;
       height: 1000px;
       border-radius: 1000px;
-      filter: blur(150px);
+      -webkit-filter: blur(150px);
+              filter: blur(150px);
       top: -30%;
       right: -10%;
     }
@@ -773,7 +775,8 @@ body {
     height: 500px;
     border-radius: 500px;
     background: radial-gradient(#ff4800 0%, rgba(255, 72, 0, 0) 100%);
-    filter: blur(54.000003814697266px);
+    -webkit-filter: blur(54.000003814697266px);
+            filter: blur(54.000003814697266px);
     position: absolute;
     top: 121px;
     left: -200px;
@@ -782,7 +785,8 @@ body {
       width: 1000px;
       height: 1000px;
       border-radius: 1000px;
-      filter: blur(150px);
+      -webkit-filter: blur(150px);
+              filter: blur(150px);
       top: 10%;
       left: -20%;
     }
@@ -990,6 +994,38 @@ body {
         font-weight: 400;
         line-height: 16px;
 
+        &::-webkit-input-placeholder {
+          color: rgba(0, 0, 0, 0.7);
+          font-family: $font-roboto, Arial, Helvetica, sans-serif;
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 16px;
+        }
+
+        &::-moz-placeholder {
+          color: rgba(0, 0, 0, 0.7);
+          font-family: $font-roboto, Arial, Helvetica, sans-serif;
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 16px;
+        }
+
+        &:-ms-input-placeholder {
+          color: rgba(0, 0, 0, 0.7);
+          font-family: $font-roboto, Arial, Helvetica, sans-serif;
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 16px;
+        }
+
+        &::-ms-input-placeholder {
+          color: rgba(0, 0, 0, 0.7);
+          font-family: $font-roboto, Arial, Helvetica, sans-serif;
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 16px;
+        }
+
         &::placeholder {
           color: rgba(0, 0, 0, 0.7);
           font-family: $font-roboto, Arial, Helvetica, sans-serif;
@@ -1026,7 +1062,9 @@ body {
         }
 
         &::before {
-          filter: brightness(0) saturate(100%) invert(28%) sepia(44%)
+          -webkit-filter: brightness(0) saturate(100%) invert(28%) sepia(44%)
+            saturate(6595%) hue-rotate(348deg) brightness(100%) contrast(97%);
+                  filter: brightness(0) saturate(100%) invert(28%) sepia(44%)
             saturate(6595%) hue-rotate(348deg) brightness(100%) contrast(97%);
         }
 
@@ -1041,7 +1079,9 @@ body {
         }
 
         &::before {
-          filter: brightness(0) saturate(100%) invert(72%) sepia(15%)
+          -webkit-filter: brightness(0) saturate(100%) invert(72%) sepia(15%)
+            saturate(1978%) hue-rotate(55deg) brightness(95%) contrast(90%);
+                  filter: brightness(0) saturate(100%) invert(72%) sepia(15%)
             saturate(1978%) hue-rotate(55deg) brightness(95%) contrast(90%);
         }
       }
@@ -1075,9 +1115,18 @@ body {
       line-height: 114.6%;
       text-transform: uppercase;
       box-shadow: 0px 0px 15.7px 0px #fff inset, 0px 0px 35.6px 0px #fff inset;
-      backdrop-filter: blur(2.449502944946289px);
+      -webkit-backdrop-filter: blur(2.449502944946289px);
+              backdrop-filter: blur(2.449502944946289px);
       transition: all 0.3s ease-in-out;
-      clip-path: polygon(
+      -webkit-clip-path: polygon(
+        15px 0,
+        100% 0,
+        100% calc(100% - 15px),
+        calc(100% - 15px) 100%,
+        0 100%,
+        0 15px
+      );
+              clip-path: polygon(
         15px 0,
         100% 0,
         100% calc(100% - 15px),
@@ -1175,7 +1224,8 @@ body {
     img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      -o-object-fit: cover;
+         object-fit: cover;
     }
 
     &.parallax1 {
@@ -1257,6 +1307,8 @@ body {
     align-items: center;
     justify-content: center;
     gap: 20px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
     margin: 0 auto;
 
@@ -1268,7 +1320,9 @@ body {
 
     .swiper-button-disabled {
       img {
-        filter: brightness(0) saturate(100%) invert(99%) sepia(1%)
+        -webkit-filter: brightness(0) saturate(100%) invert(99%) sepia(1%)
+          saturate(3233%) hue-rotate(19deg) brightness(129%) contrast(70%);
+                filter: brightness(0) saturate(100%) invert(99%) sepia(1%)
           saturate(3233%) hue-rotate(19deg) brightness(129%) contrast(70%);
       }
     }
@@ -1342,7 +1396,8 @@ body {
       img {
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        -o-object-fit: cover;
+           object-fit: cover;
         transition: all 0.4s;
       }
 
