@@ -510,7 +510,7 @@ body.modal-open {
     padding: 24px 0;
     background: rgba(0, 0, 0, 0.6);
     -webkit-backdrop-filter: blur(7.5px);
-            backdrop-filter: blur(7.5px);
+    backdrop-filter: blur(7.5px);
   }
 }
 .header .wrapper {
@@ -532,7 +532,7 @@ body.modal-open {
     width: 100%;
     height: 100%;
     -o-object-fit: contain;
-       object-fit: contain;
+    object-fit: contain;
   }
 }
 .header__nav {
@@ -963,10 +963,10 @@ body.modal-open {
   text-transform: uppercase;
   box-shadow: 0px 0px 15.7px 0px #fff inset, 0px 0px 35.6px 0px #fff inset;
   -webkit-backdrop-filter: blur(2.4495029449px);
-          backdrop-filter: blur(2.4495029449px);
+  backdrop-filter: blur(2.4495029449px);
   transition: all 0.3s ease-in-out;
   -webkit-clip-path: polygon(15px 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%, 0 15px);
-          clip-path: polygon(15px 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%, 0 15px);
+  clip-path: polygon(15px 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%, 0 15px);
   transition: all 0.4s;
 }
 .hero__form-submit:hover {
@@ -1055,7 +1055,7 @@ body.modal-open {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .hero__image.parallax1 {
   width: 199px;
@@ -1210,7 +1210,7 @@ body.modal-open {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   transition: all 0.4s;
 }
 .news__article-img::before {
